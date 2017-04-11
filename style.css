@@ -447,10 +447,18 @@ img {
 }
 /* Typography
    ========================================================================== */
-
+h3 {
+  padding: 0.35em 0em 0.6em;
+}
 .section-heading,
 .section-subheading {
   text-align: center;
+}
+.section-heading {
+  padding: 1.75em 0.25em 1.25em ;
+}
+.section-subheading {
+  padding: 0em 0.25em 1.75em;
 }
 
 /* Hero
@@ -502,7 +510,19 @@ img {
 .project-item img {
   padding: 10px;
 }
-
+a.button {
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border:solid 1px orange;
+  transition: color 0.2s ease-out,background-color 0.2s ease-out;
+}
+a.button:hover {
+  color: #fff;
+  background-color: orange;
+}
 
 /* Media Queries
    ========================================================================== */
@@ -527,6 +547,12 @@ footer {
     max-width: 768px;
     align-self: center;   
   }
+  .section-heading {
+
+  }
+  .section-subheading {
+
+  }
 
 }
 @media (min-width: 1024px) {
@@ -534,11 +560,21 @@ footer {
     padding: 0.25em 1em 4em;
   }
   .section-heading {
-    padding: 10rem 2em 5rem;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+    padding: 4em 0.25em 1.5em ;
+
   }
-  .subsection-heading {
-    padding: 3rem 2em 2rem;
-    font-size: 1.2rem;
+  .section-subheading {
+    font-size: 1.25rem;
+    padding: 0em 0.25em 2.25em;
   }
 }
+
+/*@media (min-width: 1440px) {
+  .section-heading {
+    padding: 6em 0.25em 1.5em ;
+  }
+  .section-subheading {
+    padding: 0em 0.25em 2.25em;
+  }
+}*/
