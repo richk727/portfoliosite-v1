@@ -467,6 +467,7 @@ h3 {
    ========================================================================== */
 .full-hero {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -476,14 +477,14 @@ h3 {
   background-image: url('img/coding.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-
   overflow: hidden;  
 }
 .hero-container {
   padding: 2em;
   color: #fff;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  margin-bottom: 0.5em;
   background-color: rgba(20,20,20,0.4);
 }
 .hero-container h1 {
@@ -492,6 +493,33 @@ h3 {
 .hero-container h4 {
   color: #f79418;
 }
+.hero-nav {
+  padding: 0.5em;
+  background-color: rgba(20,20,20,0.4);
+}
+.hero-nav li {
+  display: inline-block;
+}
+.hero-nav li a{
+  display: block;
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  padding: 20px 15px;
+}
+.hero-nav li a:hover {
+  color: #f79418;
+}
+.hero-nav li a:hover::before {
+  content: '';
+  position: absolute;
+  left: 10%;
+  bottom:10%;
+  width: 80%;
+  height: 3px;
+  background-color: #f79418;
+}
+
 /* Containers
    ========================================================================== */
 #projects-section {
@@ -519,7 +547,7 @@ h3 {
 
 }
 .skill-container {
-  
+  padding: 20px;
 }
 
 /* Project Section
@@ -546,6 +574,11 @@ a.button:hover {
   color: #fff;
   background-color: orange;
 }
+.contact-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
 /* Media Queries
    ========================================================================== */
@@ -558,6 +591,12 @@ footer {
 /* Media Queries
    ========================================================================== */
 @media (min-width: 768px) {
+  .hero-container {
+    font-size: 2rem;
+  }
+  .hero-nav li a{
+    padding: 20px 40px;
+  }
   .row {
     display: flex;
     justify-content: center;
