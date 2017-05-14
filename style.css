@@ -462,9 +462,7 @@ h3 {
   color: #5a5a5a;
   padding: 0em 0.25em 1.75em;
 }
-.tagcloud a {
-  font-size: 1rem;
-}
+
 
 /* Hero
    ========================================================================== */
@@ -496,6 +494,25 @@ h3 {
 .hero-container h4 {
   color: #f79418;
 }
+/*Typing animation after the subheading*/
+@keyframes typing {
+  0%{background-color:#f79418; }
+  40%{background-color:#f79418; }
+  50%{background-color: transparent;}
+  100%{background-color: transparent;}
+}
+.hero-container h4::after {
+  content: '';
+  position: absolute;
+  margin-left: 5px;
+  width: 2px; 
+  height: 2.3rem;
+  background-color: #f79418;
+  animation-name: typing;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
 .hero-nav {
   padding: 0.5em;
   background-color: rgba(20,20,20,0.4);
@@ -546,11 +563,12 @@ h3 {
   padding: 1em; 
   flex: 1;
 }
-.about {
-
-}
 .skill-container {
   padding: 20px;
+}
+.skill-image {
+  width: 125px;
+  height: 125px;
 }
 
 /* Project Section
