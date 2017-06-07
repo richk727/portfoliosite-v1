@@ -453,8 +453,11 @@ p {
   font-weight: 300;
   line-height: 1.4em;
 }
-h3 {
+h3, h4 {
   padding: 0.35em 0em 0.6em;
+}
+h4 {
+  font-size: 20px;
 }
 .section-heading,
 .section-subheading,
@@ -557,7 +560,7 @@ h3 {
   background-color: #e9ecec;
 }
 #contact-section {
-  background-color: #f79418;
+  background-color: #4a4a4a;
 }
 .container {
   display: flex;
@@ -582,11 +585,14 @@ h3 {
 .about-me p {
   text-align: justify;
 }
+.skill-container li {
+  font-weight: 300;
+}
 
 /* Project Section
    ========================================================================== */
 .project-item {
-  flex:1;
+  flex-basis: 33%;
   padding: 10px;
   text-align: center;
   transition: flex 0.5s;
@@ -607,22 +613,51 @@ a.button:hover {
   color: #fff;
   background-color: orange;
 }
-.contact-details {
+
+/* Contact Section
+   ========================================================================== */
+.contact-me {
+  margin: 0 auto;
+  max-width: 768px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contact-item {
+  display: flex;
+  align-items: center;
+}
+#contact-section .section-heading {
+  color: #f79418;
+}
+.contact-detail h3 {
+  color: #ccc;
+}
+.contact-detail a {
+  color: #fff;
+  text-decoration: none;
+}
+.contact-detail a:hover{
+  text-decoration: underline;
+  color: #f79418;
 }
 
-/* Media Queries
+/* Footer
    ========================================================================== */
 footer {
   text-align: center;
   background-color: rgb(70,90,90);
-  color: #ddd;
+  color: #bbb;
+  font-size: 14px;
 }
 
 /* Media Queries
    ========================================================================== */
+@media (min-width: 348px) {
+  .contact-detail {
+    padding: 1em;
+  }
+}
 @media (min-width: 768px) {
   .hero-container {
     font-size: 2rem;
@@ -633,6 +668,7 @@ footer {
   .row {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
   }
   .about-me,
   .my-skills {
@@ -642,9 +678,11 @@ footer {
   .about-me p {
     font-size: 18px;
   }
-
   .hero-container h4::after {
     height: 2.3rem;
+  }
+  .contact-detail {
+    padding: 2em;
   }
 
 }
