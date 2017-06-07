@@ -448,13 +448,20 @@ img {
 }
 /* Typography
    ========================================================================== */
+p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.4em;
+}
 h3 {
   padding: 0.35em 0em 0.6em;
 }
 .section-heading,
-.section-subheading {
+.section-subheading,
+.skill-subheading {
   text-align: center;
 }
+
 .section-heading {
   padding: 1.75em 0.25em 1.25em ;
 }
@@ -462,7 +469,10 @@ h3 {
   color: #5a5a5a;
   padding: 0em 0.25em 1.75em;
 }
-
+.skill-subheading {
+  color: #4a4a4a;
+  padding: 1em 0.25em 1em;
+}
 
 /* Hero
    ========================================================================== */
@@ -478,6 +488,7 @@ h3 {
   background-image: url('img/coding.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   overflow: hidden;  
 }
 .hero-container {
@@ -506,7 +517,7 @@ h3 {
   position: absolute;
   margin-left: 5px;
   width: 2px; 
-  height: 2.3rem;
+  height: 1.6rem;
   background-color: #f79418;
   animation-name: typing;
   animation-duration: 1s;
@@ -563,12 +574,13 @@ h3 {
   padding: 1em; 
   flex: 1;
 }
+
 .skill-container {
-  padding: 20px;
+  padding: 20px 40px;
+  text-align: center;
 }
-.skill-image {
-  width: 125px;
-  height: 125px;
+.about-me p {
+  text-align: justify;
 }
 
 /* Project Section
@@ -627,6 +639,14 @@ footer {
     max-width: 768px;
     align-self: center;   
   }
+  .about-me p {
+    font-size: 18px;
+  }
+
+  .hero-container h4::after {
+    height: 2.3rem;
+  }
+
 }
 @media (min-width: 1024px) {
   .container {
