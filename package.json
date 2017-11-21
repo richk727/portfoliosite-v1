@@ -1,0 +1,29 @@
+{
+  "name": "portfoliosite",
+  "version": "1.0.0",
+  "description": "A portfolio site to showcase my work",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^4.3.11"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richk727/portfoliosite-v1.git"
+  },
+  "author": "Richard Kaye",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/richk727/portfoliosite-v1/issues"
+  },
+  "homepage": "https://github.com/richk727/portfoliosite-v1#readme"
+}
