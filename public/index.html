@@ -3,6 +3,25 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Richard Kaye Portfolio Site</title>
+	<meta name="description" content="I'm a web developer with over 3 years of commercial experience in developing and implementing bespoke websites, primarily in the LAMP stack!">
+	<link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/assets/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/assets/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#f79418">
+	<meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#f79418">
+
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,500,600" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/main.min.css">
 </head>
@@ -21,82 +40,114 @@
 		<nav class="hero-nav">
 			<ul>
 				<li><a href="#introduction-section">About</a></li>
+				<li><a href="#skillset-section">Skills</a></li>
 				<li><a href="#projects-section">Projects</a></li>
 				<li><a href="#contact-section">Contact</a></li>
 			</ul>
-		</nav>		
+		</nav>
+		<nav class="social-nav">
+			<a class="social-nav__link" href="https://github.com/richk727" target="blank" rel="noopener">
+				<svg enable-background="new 0 0 24 24" viewBox="0 0 24 24"xmlns="http://www.w3.org/2000/svg"><path d="m12 .5c-6.63 0-12 5.28-12 11.792 0 5.211 3.438 9.63 8.205 11.188.6.111.82-.254.82-.567 0-.28-.01-1.022-.015-2.005-3.338.711-4.042-1.582-4.042-1.582-.546-1.361-1.335-1.725-1.335-1.725-1.087-.731.084-.716.084-.716 1.205.082 1.838 1.215 1.838 1.215 1.07 1.803 2.809 1.282 3.495.981.108-.763.417-1.282.76-1.577-2.665-.295-5.466-1.309-5.466-5.827 0-1.287.465-2.339 1.235-3.164-.135-.298-.54-1.497.105-3.121 0 0 1.005-.316 3.3 1.209.96-.262 1.98-.392 3-.398 1.02.006 2.04.136 3 .398 2.28-1.525 3.285-1.209 3.285-1.209.645 1.624.24 2.823.12 3.121.765.825 1.23 1.877 1.23 3.164 0 4.53-2.805 5.527-5.475 5.817.42.354.81 1.077.81 2.182 0 1.578-.015 2.846-.015 3.229 0 .309.21.678.825.56 4.801-1.548 8.236-5.97 8.236-11.173 0-6.512-5.373-11.792-12-11.792z"/></svg>
+			</a>
+			<a class="social-nav__link" href="https://codepen.io/richkk727" target="blank" rel="noopener">
+				<svg id="regular" enable-background="new 0 0 24 24" viewBox="0 0 24 24"xmlns="http://www.w3.org/2000/svg"><path d="m24 7.598c-.044-.264-.08-.47-.36-.641-11.449-6.791-11.287-7.297-12.03-6.848-8.677 5.394-11.092 6.597-11.439 7.017-.315.323-.171.818-.171 8.298-.021.851 7.743 5.462 11.519 8.404.333.237.752.199 1.003-.029 11.224-7.956 11.497-7.636 11.478-8.375 0 0-.012-7.927 0-7.826zm-1.5 6.491-3.876-2.359 3.876-2.697zm-5.277-3.212-4.473-2.722v-6.07l9.126 5.555zm-5.223 3.633-3.876-2.697 3.876-2.359 3.876 2.359zm-.75-12.426v6.074c-1.739 1.079-3.209 1.98-4.451 2.734l-4.675-3.252zm-5.857 9.658c-1.874 1.127-3.098 1.843-3.893 2.32v-5.029zm1.33.924 4.527 3.149v5.999l-9.126-6.349zm6.027 9.149v-5.999l4.527-3.149 4.599 2.799z"/></svg>
+			</a>
+		</nav>
 		</div>
 	</div>
 	<!-- About me and skills  -->
-	<section id="introduction-section">
-		<div class="container">
+	<section class="site-section" id="introduction-section">
+		<div class="container container--small">
 			<div class="about-me">
 				<h2 class="section-heading">About Me</h2>
-				<p>Hi, I&#39;m Richard Kaye, a front end web developer who lives in the city of Swansea, Wales. I am a self taught developer with a passion for all things web! I am able to code websites from scratch, start to finish as well as working with an existing code base. I enjoy creating responsive websites with a focus on intuitive UX design whilst also paying close attention to performance metrics. </p>
+				<p>
+					Hi I&#39;m Richard Kaye, a web developer with over 3 years of commercial experience in developing and implementing bespoke websites primarily in the LAMP stack!
+				</p>
+				<p>
+					Currently I work at <a href="https://www.copperbaydigital.co.uk/" target="blank" rel="noopener">Copperbay Digital</a> building exciting websites for their clients across South Wales.
+					I'm passionate about creating the best user experience to help clients succeed in their visions. Most recently I have successfully delivered a redesign of a clients bespoke e-commerce website following their rebrand!
+				</p>
+				<p>
+					On the side I'm currently <code>php artisan tinker</code>'ing with the Laravel framework with a mealplanner app, you can view progress here.
+				</p>
 			</div>
+		</div>
+	</section>
+	<section  class="site-section site-section--alt-bg" id="skillset-section">
+		<div class="container">
 			<div class="my-skills">
-				<h3 class="skill-subheading">Skillset</h3>
+				<h2 class="section-heading">Skillset</h2>
 				<div class="row">
-					<div class="skill-container">
-						<div class="skill-container__icon">
-							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-							width="125px" height="125px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
-								<path fill="none" d="M0,0h48v48H0V0z"/>
-								<path fill="none" stroke="#F79418" stroke-miterlimit="10" d="M18.679,33.2L8.933,24l9.746-9.2L15.712,12L3,24l12.712,12
-									L18.679,33.2z M29.696,33.2l9.747-9.2l-9.747-9.2l2.967-2.8l12.712,12L32.663,36L29.696,33.2z"/>
-								<line fill="#F79418" stroke="#F79418" stroke-width="1" stroke-miterlimit="10" x1="19.833" y1="39" x2="28" y2="9.25"/>
-					   		</svg>
-						</div>
-						<div >
-							<h3>Core</h3>
-							<ul>
-								<li>HTML</li>
-								<li>CSS3</li>
-								<li>JavaScript</li>
-								<li>jQuery</li>
-								<li>Liquid</li>
-							</ul>	
-						</div>
-					</div>
-					<div class="skill-container">
-						<div class="skill-container__icon"></div>
-							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-							width="125" height="125px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
-							<path fill="none" stroke="#F79418" stroke-miterlimit="10" d="M20,36h10V24H20V36z M8,36h10V10H8V36z M32,36h10V24H32V36z M20,10v12
-								h22V10H20z"/>
-							<path fill="none" d="M0,0h48v48H0V0z"/>
-							</svg>
-						</div>
-						<div class="skill-container__content">
-							<h3>Frameworks/CMS</h3>
-							<ul>
-								<li>Wordpress</li>							
-								<li>Bootstrap</li>
-								<li>Shopify</li>
-							</ul>
+					<div class="col col--3">
+						<div class="skill-container">
+							<div class="skill-container__icon">
+								<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+									<path fill="none" d="M0,0h38v48H0V0z"/>
+									<path fill="none" stroke="#F79418" stroke-miterlimit="10" d="M18.679,33.2L8.933,24l9.746-9.2L15.712,12L3,24l12.712,12
+										L18.679,33.2z M29.696,33.2l9.747-9.2l-9.747-9.2l2.967-2.8l12.712,12L32.663,36L29.696,33.2z"/>
+									<line fill="#F79418" stroke="#F79418" stroke-width="1" stroke-miterlimit="10" x1="19.833" y1="39" x2="28" y2="9.25"/>
+								</svg>
+							</div>
+							<div class="skill-container__content">
+								<h3>Core</h3>
+								<ul>
+									<li>HTML</li>
+									<li>CSS(SASS)</li>
+									<li>JavaScript(jQuery, vanilla)</li>
+									<li>PHP</li>
+									<li>MySQL</li>
+									<li>Liquid</li>
+								</ul>	
+							</div>
 						</div>
 					</div>
-					<div class="skill-container">
-						<div class="skill-container__icon">
-							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-								width="125px" height="125px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
-								<path fill="none" d="M0,0h48v48H0V0z"/>
-								<path fill="none" stroke="#F79418" stroke-miterlimit="10" d="M38.552,33.62L26.161,21.155c1.226-3.15,0.544-6.849-2.042-9.452
-									c-2.723-2.739-6.808-3.287-10.076-1.781l5.855,5.891l-4.085,4.109l-5.991-5.89c-1.634,3.288-0.953,7.397,1.77,10.137
-									c2.587,2.603,6.263,3.288,9.395,2.056l12.39,12.465c0.545,0.549,1.361,0.549,1.906,0l3.132-3.15
-									C39.096,34.99,39.096,34.031,38.552,33.62z"/>
-							</svg>
+					<div class="col col--3">
+						<div class="skill-container">
+							<div class="skill-container__icon">
+								<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+								<path fill="none" stroke="#F79418" stroke-miterlimit="10" d="M20,36h10V24H20V36z M8,36h10V10H8V36z M32,36h10V24H32V36z M20,10v12
+									h22V10H20z"/>
+								<path fill="none" d="M0,0h38v48H0V0z"/>
+								</svg>
+							</div>
+							<div class="skill-container__content">
+								<h3>Frameworks/CMS</h3>
+								<ul>
+									<li>WordPress</li>
+									<li>WooCommerce</li>
+									<li>Laravel</li>
+									<li>Shopify</li>
+									<li>Bulma</li>
+									<li>Bootstrap</li>
+									<li>Tailwind</li>
+								</ul>
+							</div>
 						</div>
-						<div class="skill-container__content">
-							<h3>Tools</h3>
-							<ul>
-								<li>Git</li>
-								<li>Gulp</li>
-								<li>Deploybot</li>
-								<li>Adobe Suite</li>
-								<li>Figma</li>
-								<li>Sublime Text 3</li>
-							</ul>
+					</div>
+					<div class="col col--3">
+						<div class="skill-container">
+							<div class="skill-container__icon">
+								<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+									<path fill="none" d="M0,0h38v48H0V0z"/>
+									<path fill="none" stroke="#F79418" stroke-miterlimit="10" d="M38.552,33.62L26.161,21.155c1.226-3.15,0.544-6.849-2.042-9.452
+										c-2.723-2.739-6.808-3.287-10.076-1.781l5.855,5.891l-4.085,4.109l-5.991-5.89c-1.634,3.288-0.953,7.397,1.77,10.137
+										c2.587,2.603,6.263,3.288,9.395,2.056l12.39,12.465c0.545,0.549,1.361,0.549,1.906,0l3.132-3.15
+										C39.096,34.99,39.096,34.031,38.552,33.62z"/>
+								</svg>
+							</div>
+							<div class="skill-container__content">
+								<h3>Tools</h3>
+								<ul>
+									<li>VS Code</li>
+									<li>Git</li>
+									<li>NPM</li>
+									<li>Composer</li>
+									<li>Prepros</li>
+									<li>Gulp</li>
+									<li>Figma</li>
+									<li>Adobe Suite</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -104,60 +155,133 @@
 		</div>
 	</section>
 	<!-- My latest projects  -->
-	<section id="projects-section">
+	<section class="site-section" id="projects-section">
 		<div class="container">
 			<h2 class="section-heading">Projects</h2>
-			<h3 class="section-subheading">A collection of recent projects</h3>
-			<div class="row">
-				<div class="project-card">
-					<div class="project-card__image">
-						<img src="/assets/img/cfo-forum-thumb.jpg"/>
+			<h3 class="section-subheading">A collection of some of my projects and freelance work</h3>
+			<div class="projects-list">
+				<div class="row row--center">
+					<div class="col col--3">
+						<div class="project-card">
+							<div class="project-card__image">
+								<img src="/assets/img/mealplanner.jpg"/>
+							</div>
+							<div class="project-card__content">
+								<h3>Mealplanner App<span class="extra"> / 2020</span></h3>
+								<p>WIP A CRUD web app for all your recipes. Currently being built using test driven development in Laravel!</p>
+							</div>
+							<div class="project-card__footer">
+								<a class="button" href="https://github.com/richk727/mealplanner" target="blank" rel="noopener">View Code</a>
+							</div>
+						</div>
 					</div>
-					<div class="project-card__content">
-						<h4>CFO Forum South Wales Website</h4>
-						<p>Recent freelance project to create a web prescense for this recurring event. Wordpress based with custom post types.</p>
+					<div class="col col--3">
+						<div class="project-card">
+							<div class="project-card__image">
+								<img src="/assets/img/tapas.jpg"/>
+							</div>
+							<div class="project-card__content">
+								<h3>JavaScript Tapas List <span class="extra"> / 2019</span></h3>
+								<p>A Tapas list using local stoarage and event delegation</p>
+							</div>
+							<div class="project-card__footer">
+								<a class="button" href="https://richk727.github.io/javascript-tapas-list/index.html">View Site</a>
+								<a href="https://github.com/richk727/javascript-tapas-list" class="button" target="blank" rel="noopener">View Code</a>
+							</div>
+						</div>
 					</div>
-					<div class="project-card__footer">
-						<a class="button" href="http://www.cfoforum.richardkaye.co.uk/">View Project</a>
-					</div>					
-				</div>				
-				<div class="project-card">
-					<div class="project-card__image">
-						<img src="/assets/img/media-company.jpg"/>
+					<div class="col col--3">
+						<div class="project-card">
+							<div class="project-card__image">
+								<img src="/assets/img/jdkaye-designs.jpg"/>
+							</div>
+							<div class="project-card__content">
+								<h3>JD Kaye Designs Website <span class="extra"> / 2019</span></h3>
+								<p>An artist portfolio site used to display recent works and events. Built using Wordpress for CMS.</p>
+							</div>
+							<div class="project-card__footer">
+								<a class="button" href="http://www.jdkayedesigns.com/" target="blank" rel="noopener">View Site</a>
+							</div>
+						</div>
 					</div>
-					<div class="project-card__content">
-						<h4>Wordpress Company Theme</h4>
-						<p>Practising with Wordpress theme development. Makes use of multiple custom post types, multiple loops and featured posts slider.</p>
+	
+					<div class="col col--3">
+						<div class="project-card">
+							<div class="project-card__image">
+								<img src="/assets/img/joy.jpg"/>
+							</div>
+							<div class="project-card__content">
+								<h3>Joy Transformation Coach <span class="extra"> / 2017</span></h3>
+								<p>WordPress site built to showcase the clients events, services & books</p>
+								<p class="small">Note: Site was handed over on completion so may appear differently.</p>
+							</div>
+							<div class="project-card__footer">
+								<a class="button" href="http://www.joytransformationcoach.com/contact/" target="blank" rel="noopener">View Site</a>
+							</div>
+						</div>
 					</div>
-					<div class="project-card__footer">
-						<a class="button" href="http://www.mediacompany.richardkaye.co.uk/">View Project</a>
-					</div>					
+					
+					<div class="col col--3">
+						<div class="project-card">
+							<div class="project-card__image">
+								<img src="/assets/img/portfolio-site.jpg"/>
+							</div>
+							<div class="project-card__content">
+								<h3>Portfolio Site<span class="extra"> / 2017</span></h3>
+								<p>First version of this very site! Built in plain old HTML, SASS with small sprinkle of JavaScript</p>
+							</div>
+							<div class="project-card__footer">
+								<a class="button" href="https://github.com/richk727/portfoliosite-v1" target="blan" rel="noopener">View Code</a>
+							</div>					
+						</div>
+					</div>
+
+					<div class="col col--3">
+						<div class="project-card">
+							<div class="project-card__image">
+								<img src="/assets/img/cfo-forum-thumb.jpg"/>
+							</div>
+							<div class="project-card__content">
+								<h3>CFO Forum South Wales Website <span class="extra"> / 2017</span></h3>
+								<p>Recent freelance project to create a web prescense for this recurring event. Wordpress based with custom post types.</p>
+							</div>
+							<div class="project-card__footer">
+								<a class="button" href="http://www.cfo-forum.co.uk/" target="blan" rel="noopener">View Project</a>
+							</div>					
+						</div>
+					</div>
+
+					<div class="col col--3">
+						<div class="project-card">
+							<div class="project-card__image">
+								<img src="/assets/img/image-hover-thumb.jpg"/>
+							</div>
+							<div class="project-card__content">
+								<h3>Image Hover Gallery <span class="extra"> / 2017</span></h3>
+								<p>A collection of various image hover effects that use minimal HTML and pure CSS. The image effects all use the same template HTML code.</p>
+							</div>
+							<div class="project-card__footer">
+								<a class="button" href="http://imagehover.richardkaye.co.uk/" target="blan" rel="noopener">View Project</a> <a class="button" href="https://github.com/richk727/image-hover-gallery" target="blan" rel="noopener">View Code</a>
+							</div>
+						</div>
+					</div>	
+
+					<div class="col col--3">
+						<div class="project-card">
+							<div class="project-card__image">
+								<img src="/assets/img/media-company.jpg"/>
+							</div>
+							<div class="project-card__content">
+								<h3>Wordpress Company Theme <span class="extra"> / 2017</span></h3>
+								<p>Practising with Wordpress theme development. Makes use of multiple custom post types, multiple loops and featured posts slider.</p>
+							</div>
+							<div class="project-card__footer">
+								<a class="button" href="http://www.mediacompany.richardkaye.co.uk/" target="blan" rel="noopener">View Project</a>
+							</div>					
+						</div>
+					</div>	
+									
 				</div>
-				<div class="project-card">
-					<div class="porject-card__image">
-						<img src="/assets/img/jdkaye-designs.jpg"/>
-					</div>
-					<div class="project-card__content">
-						<h4>JD Kaye Designs Website</h4>
-						<p>An artist portfolio site used to display recent works and events. Built using Wordpress for CMS and using Bootstrap as a framework.</p>
-					</div>
-					<div class="project-card__footer">
-						<a class="button" href="http://www.jdkayedesigns.com/">View Project</a>
-					</div>
-				</div>
-				<div class="project-card">
-					<div class="porject-card__image">
-						<img src="/assets/img/image-hover-thumb.jpg"/>
-					</div>
-					<div class="project-card__content">
-						<h4>Image Hover Gallery</h4>
-						<p>A collection of various image hover effects that use minimal HTML and pure CSS. The image effects all use the same template HTML code.</p>
-					</div>
-					<div class="project-card__footer">
-						<a class="button" href="http://www.imagehover.richardkaye.co.uk/">View Project</a>
-					</div>
-				</div>
-				
 			</div>
 		</div>		
 	</section>
@@ -177,19 +301,19 @@
 					</svg>
 					<div class="contact-detail">
 						<h3>Email</h3>
-						<a href="mailto:rick727@gmai1.com?subject=Website Query">richk727@gmail.com</a>
+						<a href="mailto:hello@richardkaye.co.uk?subject=Website Query">hello@richardkaye.co.uk</a>
 					</div>
 				</div>
 			</div>
 		</div>
 		
 	</section>
-	<footer>
-		<p> &copy; 2017 Richard Kaye. Designed by Richard Kaye, Developed by Richard Kaye, Hosted by Richard Kaye, Enhanced by Richard Kaye, Updated by Richard Kaye</p>
+	<footer class="site-footer">
+		<p> &copy; 2017-present Richard Kaye. Designed by Richard Kaye, Developed by Richard Kaye, Hosted by Richard Kaye, Enhanced by Richard Kaye, Updated by Richard Kaye</p>
 	</footer>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-	<script type="text/javascript" src="main.js"></script>
+	<script type="text/javascript" src="assets/js/main.min.js"></script>
 	<script>
 
 	</script>

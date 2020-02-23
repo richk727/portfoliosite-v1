@@ -14,6 +14,16 @@
 	background-size: cover;
 	background-attachment: fixed;
 	overflow: hidden;
+
+	&:before {
+		content: '';
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		height: 50%;
+		background: linear-gradient(to top,rgba(52, 37, 60, 0.76),rgba(20,20,20,0));
+	}
 }
 .hero-container {
 	padding: 2em;
@@ -27,7 +37,7 @@
 	margin-top: 0;
 }
 .hero-container h2 {
-	color: #f79418;
+	color: $primary;
 }
 /*Typing animation after the subheading*/
 @keyframes typing {
@@ -69,16 +79,50 @@
 	color: #fff;
 	text-decoration: none;
 	padding: 20px 15px;
+	transition: all 325ms ease-in-out;
+	&:before {
+		content: "";
+		position: absolute;
+		left: 10%;
+		bottom: 10%;
+		width: 80%;
+		height: 3px;
+		background-color: $primary;
+		opacity: 0;
+		transform: translateY(5px);
+		transition: all 325ms ease-in-out;
+	}
 }
 .hero-nav li a:hover {
-	color: #f79418;
+	color: $primary;
 }
 .hero-nav li a:hover::before {
-	content: "";
-	position: absolute;
-	left: 10%;
-	bottom: 10%;
-	width: 80%;
-	height: 3px;
-	background-color: #f79418;
+	opacity: 1;
+	transform: translateY(0);
+}
+
+
+.social-nav {
+	position: relative;
+	padding: 1rem 0.5em;
+	display: flex;
+	justify-content: center;
+
+	&__link {
+		display: block;
+		padding: 6px;
+		margin: 0 6px;
+
+		svg {
+			fill: #fff;
+			width: 32px;
+			transition: all 325ms ease-in-out;
+		}
+
+		&:hover {
+			svg {
+				fill: $primary;
+			}
+		}
+	}
 }

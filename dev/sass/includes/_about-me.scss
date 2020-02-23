@@ -4,15 +4,83 @@
 .my-skills {
 	padding: 1em;
 	flex: 1;
+
+	a {
+		display: inline-block;
+		position: relative;
+		color: $primary;
+		text-decoration: none;
+
+		&:before {
+			content: '';
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			height: 1px;
+			background: $primary;
+			transition: all 225ms ease-in-out;
+		}
+
+		&:hover {
+			color: darken($primary, 10%);
+
+			&:before {
+				height: 3px;
+			}
+		}
+	}
+	code {
+		font-family: monospace;
+		padding: 0 5px;
+		font-weight: 500;
+		line-height: 1.9;
+		color: #090910;
+		background-color: #f5e3cd;
+	}
 }
 
 .skill-container {
-	padding: 20px 40px;
+	position: relative;
+	padding: 0 0 50px;
 	text-align: center;
+
+	&__icon {
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 64px;
+		height: 64px;
+	}
+
+	&__content {
+		text-align: left;
+
+		h3 {
+			margin-bottom: 1rem;
+		}
+
+		
+	}
+
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	li {
+		display: inline-block;
+		position: relative;
+		line-height: 1.6;
+		padding: 2px 8px;
+		color: #474747;
+		margin: 0 8px 8px 0;
+		color: #fff;
+		background-color: $primary;
+		border-radius: 3px;
+	}
 }
+
 .about-me p {
 	text-align: justify;
-}
-.skill-container li {
-	font-weight: 300;
 }

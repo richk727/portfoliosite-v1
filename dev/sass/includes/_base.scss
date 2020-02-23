@@ -8,7 +8,7 @@ body {
 	margin: 0;
 	font-family: "Montserrat", sans-serif;
 	font-size: 16px;
-	color: #3a3a3a;
+	color: $text;
 }
 
 ul {
@@ -19,17 +19,69 @@ img {
 }
 
 /* Containers
-     ========================================================================== */
-#projects-section {
+	 ========================================================================== */
+	 
+.site-section {
+	padding: 3rem 1.5rem;
+}
+
+.site-section--alt-bg {
 	background-color: #e9ecec;
 }
+
 #contact-section {
 	background-color: #4a4a4a;
 }
+
+
 .container {
 	display: flex;
 	flex-direction: column;
 	padding: 0.25em 0.25em 2em;
-	max-width: 1140px;
+	max-width: 1220px;
 	margin: 0 auto;
+
+	&--small {
+		max-width: 750px;
+	}
 }
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -24px;
+	margin-right: -24px;
+
+	&--center {
+		justify-content: center;
+	}
+}
+
+.col {
+	position: relative;
+	width: 100%;
+	padding-left: 24px;
+	padding-right: 24px;
+	min-height: 1px;
+
+	&--3 {
+		@media (min-width: 750px) {
+			flex: 0 0 50%;
+			max-width: 50%;
+		}
+
+		@media (min-width: 1150px) {
+			flex: 0 0 33.3333%;
+			max-width: 33.3333%;
+		}
+	}
+
+	&--auto {
+		@media (min-width: 768px) {
+			flex-basis: 0;
+			flex-grow: 1;
+			max-width: 100%;
+		}
+	}
+}
+
