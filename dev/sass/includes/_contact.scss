@@ -1,0 +1,27 @@
+/* Contact Section
+     ========================================================================== */
+.contact-me {
+	margin: 0 auto;
+	max-width: 768px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.contact-item {
+	display: flex;
+	align-items: center;
+}
+#contact-section .section-heading {
+	color: #f79418;
+}
+.contact-detail h3 {
+	color: #ccc;
+}
+.contact-detail a {
+	color: #fff;
+	text-decoration: none;
+}
+.contact-detail a:hover {
+	text-decoration: underline;
+	color: #f79418;
+}

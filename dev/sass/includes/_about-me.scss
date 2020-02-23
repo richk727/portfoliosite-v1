@@ -1,0 +1,18 @@
+/* About Me Section
+     ========================================================================== */
+.about-me,
+.my-skills {
+	padding: 1em;
+	flex: 1;
+}
+
+.skill-container {
+	padding: 20px 40px;
+	text-align: center;
+}
+.about-me p {
+	text-align: justify;
+}
+.skill-container li {
+	font-weight: 300;
+}
