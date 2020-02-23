@@ -1,53 +1,87 @@
-/******************************
-	REQUIRED DEPENDENCIES
-*******************************/
+'use strict';
 
-var gulp = require('gulp');
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
+const rename = require('gulp-rename');
+const cleanCSS = require('gulp-clean-css');
 
-var gulpPlumber = require('gulp-plumber');
+const browserSync = require('browser-sync');
 
-var gulpWatch = require('gulp-watch');
-
-var cleanCSS = require('gulp-clean-css');
-
-var uglifyJs = require('gulp-uglify');
-
-
-/******************************
-	DEFAULT TASKS
-*******************************/
-
-gulp.task('default', [
-	'minify-css:watch',
-	'minify-js:watch'
-]);
+const server = browserSync.create();
 
 
-/******************************
-	CSS TASKS
-*******************************/
+const paths = {
+  styles: {
+    src: 'dev/sass/**/*.sass',
+    dest: 'public/assets/css/'
+  },
+  scripts: {
+    src: 'deb/js/**/*.js',
+    dest: 'public/assets/js/'
+  }
+};
+ 
+/*
+ * Define our tasks using plain functions
+ */
+function styles() {
+  return gulp.src(paths.styles.src)
+  	.pipe(sass().on('error', sass.logError))
+    .pipe(cleanCSS())
+    // pass in options to the stream
+    .pipe(rename({
+      basename: 'main',
+      suffix: '.min'
+    }))
+    .pipe(gulp.dest(paths.styles.dest));
+}
+ 
+function scripts() {
+  return gulp.src(paths.scripts.src, { sourcemaps: false })
+    .pipe(uglify())
+    .pipe(concat('main.min.js'))
+    .pipe(gulp.dest(paths.scripts.dest));
+}
+ 
+function reload(done) {
+	server.reload();
+	done();
+}
 
-gulp.task('minify-css', function(){
-	return gulp.src('./css/style.css')
-		.pipe(cleanCSS())
-		.pipe(gulp.dest('./'));
-});
+function serve(done) {
+	server.init({
+	  server: {
+		baseDir: 'public/'
+	  }
+	});
+	done();
+}
 
-gulp.task('minify-css:watch', function(){
-	gulp.watch('./css/style.css', ['minify-css']);
-});
+function watch() {
+  gulp.watch(paths.scripts.src, gulp.series(scripts, reload));
+  gulp.watch(paths.styles.src, gulp.series(styles, reload));
+}
 
 
-/******************************
-	JAVASCRIPT TASKS
-*******************************/
+ 
+/*
+ * Specify if tasks run in series or parallel using `gulp.series` and `gulp.parallel`
+ */
+const build = gulp.series(gulp.parallel(styles, scripts));
 
-gulp.task('minify-js', function(){
-	return gulp.src('./js/main.js')
-		.pipe(uglifyJs())
-		.pipe(gulp.dest('./'));
-});
+const dev = gulp.series(styles, scripts, serve, watch);
 
-gulp.task('minify-js:watch', function(){
-	gulp.watch('./js/main.js', ['minify-js']);
-});
+/*
+ * You can use CommonJS `exports` module notation to declare tasks
+ */
+exports.styles = styles;
+exports.scripts = scripts;
+exports.watch = watch;
+exports.build = build;
+exports.dev = dev;
+/*
+ * Define default task that can be called by just running `gulp` from cli
+ */
+exports.default = dev;
